@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --ff-primary: 'Archivo';
+    --ff-secondary: 'Poppins';
+}
+
+body{
+    background: #E5E5E5;
+    font-family: var(--ff-secondary);
+}
+
+h1, legend, footer input{
+    font-family: var(--ff-primary);
+}
+
+body::before{
+    content: '';
+    background: #121214; 
+    position: absolute;
+    height: 37rem;
+    width: 100%;
+    z-index: -1;   
+}
+
+.container{
+    padding: 8.0rem 0 2.0rem;
+    max-width: 74rem;
+    margin: 0 auto;
+}
+
+.container header{
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.container header h1{
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+
+.container header p{
+    color: #42D3FF;
+    font-size: 1.5rem;
+    margin-top: 2.4rem;
+}
+
+#event-form{
+    background-color: #FAFAFC;
+    margin: 4.2rem 1rem 0;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    padding: 2rem;
+}
+
+#event-form fieldset{
+    border: none;
+
+}
+
+.fieldset-wrapper legend{
+    font-size: 2rem;
+    color: #32264D;
+    line-height: 3.4rem;
+    font-weight: 400;
+    border-bottom: 1px solid #E6E6F0;
+    padding-bottom: 1.6rem;
+}
+
+.input-wrapper{
+    margin-top: 2.4rem;
+}
+
+.checkbox-wrapper{
+    margin-top: 2.4rem;
+    position: relative;
+}
+
+.input-wrapper input, textarea{
+    font-family: var(--ff-secondary);
+}
+
+.checkbox-wrapper input{
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    opacity: 0;
+}
+
+.checkbox-wrapper label::before{
+    content: '';
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 8px;
+    border: 1px solid #E6E6F0;
+    display: block;
+}
+
+.checkbox-wrapper label{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input-wrapper label,
+.checkbox-wrapper label{
+    font-size: 1.3rem;
+    color: #4E4958;
+    line-height: 2.4rem;
+}
+
+.checkbox-wrapper input:checked + label::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.checkbox-wrapper input:focus + label::before{
+    outline: 2px solid black;
+}
+
+.input-wrapper span{
+    color: #C1BCCC;
+    margin-left: 1.2rem;
+    font-size: 1rem;
+}
+
+.input-wrapper input{
+    background: #FAFAFC;
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    height: 3.6rem;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.input-wrapper input:invalid:focus{
+    border: 1px solid #FF1010;
+}
+
+.input-wrapper textarea{
+    resize: none;
+    padding: 10px 10px;
+}
+
+.input-wrapper textarea, select{
+    width: 100%;
+    border: 1px solid #E6E6F0;
+    background: #FAFAFC;
+    border-radius: 8px;
+}
+
+.input-wrapper select{
+    height: 3.6rem;
+}
+
+footer{
+    background-color: #F0F0F4;
+    margin: 0 1rem;
+    height: auto;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    padding: 2.0rem;
+}
+
+footer input{
+    background: #04D361;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 26px;
+    width: 90%;
+}
+
+footer input:hover{
+    background-color: #03853e;
+    cursor: pointer;
+}
+
+@media (min-width: 768px){
+    .container header{
+        text-align: left;
+        width: 50%;
+    }
+
+    .col-3{
+        display: flex;
+        gap: 2.0rem;
+    }
+
+    .col-3 > div:nth-child(1){
+        width: 50%;
+    }
+
+    .col-3 > div:nth-child(n+2){
+        width: 25%;
+    }
+}
+
+
+
